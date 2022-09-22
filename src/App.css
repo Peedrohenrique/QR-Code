@@ -28,6 +28,20 @@
   color: #61dafb;
 }
 
+.card {
+  height: 152px;
+  width: 150px;
+}
+
+.gerar {
+  margin: 7px;
+}
+
+.baixar {
+  margin-left: -37px;
+  margin-right: -37px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

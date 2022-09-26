@@ -6,10 +6,15 @@ function QrCode() {
   const [medidas, setMedidas] = useState("");
 
   const list = [
-    { id: 1, name: "150x150" },
-    { id: 2, name: "200x200" },
-    { id: 3, name: "250x250" },
-    { id: 4, name: "300x300" },
+    { id: 1, name: "50x50" },
+    { id: 2, name: "100x100" },
+    { id: 3, name: "150x150" },
+    { id: 4, name: "200x200" },
+    { id: 5, name: "250x250" },
+    { id: 6, name: "300x300" },
+    { id: 7, name: "350x350" },
+    { id: 8, name: "400x400" },
+    { id: 9, name: "450x450" },
   ];
   console.log(medidas);
   function handleAPI() {
@@ -25,7 +30,7 @@ function QrCode() {
       <header className="App-header">
         <h1 className="display-1">QR Code</h1>
         <div>
-          <label>Seu link</label>
+          <label>Insira o seu site ou texto</label>
           <input
             className="form-control"
             id="formGroupExampleInput"
@@ -56,9 +61,9 @@ function QrCode() {
         </button>
 
         {response && (
-          <div className="card">
-            <img src={response} />
-            <div className="card-body">
+          <div>
+            <img src={response} className="img-fluid" alt="QR-Code" />
+            <div>
               <a
                 href={response}
                 target="_blank"

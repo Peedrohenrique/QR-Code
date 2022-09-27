@@ -1,82 +1,73 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 function QrCode() {
+  const [texto, setTexto] = useState("");
   const [link, setLink] = useState("");
-  const [response, setResponse] = useState("");
-  const [medidas, setMedidas] = useState("");
+  const [tamanho, setTamanho] = useState(150);
+  const [bgColor, setBgColor] = useState("ffffff");
+  const [qrCode, setQrCode] = useState("");
+  const rota = `http://api.qrserver.com/v1/create-qr-code/?data=${link}!&size=${tamanho}x${tamanho}&bgcolor=${bgColor}`;
+  useEffect(() => {
+    setQrCode(rota);
+  }, [link, tamanho, bgColor]);
 
-  const list = [
-    { id: 1, name: "50x50" },
-    { id: 2, name: "100x100" },
-    { id: 3, name: "150x150" },
-    { id: 4, name: "200x200" },
-    { id: 5, name: "250x250" },
-    { id: 6, name: "300x300" },
-    { id: 7, name: "350x350" },
-    { id: 8, name: "400x400" },
-    { id: 9, name: "450x450" },
-  ];
-  console.log(medidas);
-  function handleAPI() {
-    setResponse(
-      `https://chart.googleapis.com/chart?chs=${medidas}&cht=qr&chl=${link}`
-    );
-    setLink("");
-    setMedidas("");
+  function handleClick() {
+    setLink(texto);
+    toast.success("QR-Code Gerado!");
+    setTexto("");
   }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="display-1">QR Code</h1>
-        <div>
-          <label>Insira o seu site ou texto</label>
+      <h1>QR Code Generator</h1>
+      <div className="input-box">
+        <div className="geracao">
           <input
-            className="form-control"
-            id="formGroupExampleInput"
-            value={link}
-            onChange={(e) => setLink(e.target.value)}
-            placeholder="https://www.exemplo.com"
+            type="text"
+            value={texto}
+            onChange={(e) => {
+              setTexto(e.target.value);
+            }}
+            placeholder="Digite o texto"
+          />
+          <button className="button" onClick={handleClick}>
+            Gerar
+          </button>
+        </div>
+        <div className="extra">
+          <h5>Cor de fundo:</h5>
+          <input
+            type="color"
+            onChange={(e) => {
+              setBgColor(e.target.value.substring(1));
+            }}
+          />
+          <h5>Dimensão:</h5>
+          <input
+            type="range"
+            min="150"
+            max="600"
+            value={tamanho}
+            onChange={(e) => {
+              setTamanho(e.target.value);
+            }}
           />
         </div>
-
-        <div>
-          <label>Medidas</label>
-          <select
-            defaultValue={medidas}
-            onChange={(e) => setMedidas(e.target.value)}
-            className="form-select"
-            placeholder="Selecione as medidas"
-          >
-            <option selected>Selecione as medidas</option>
-            {list.map((item, index) => (
-              <option defaultValue={item.id} key={index}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <button className="btn btn-primary gerar" onClick={handleAPI}>
-          Gerar QRCode
-        </button>
-
-        {response && (
-          <div>
-            <img src={response} className="img-fluid" alt="QR-Code" />
-            <div>
-              <a
-                href={response}
-                target="_blank"
-                rel="noopener noreferrer"
-                download
-                className="btn btn-primary baixar"
-              >
-                Clique para baixar
-              </a>
-            </div>
-          </div>
-        )}
-      </header>
+      </div>
+      <div className="output-box">
+        <img src={qrCode} alt="" className="img-fluid" />
+        <a
+          href={qrCode}
+          download="QRCode"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button type="button" className="button">
+            Download
+          </button>
+        </a>
+      </div>
     </div>
   );
 }

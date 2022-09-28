@@ -1,6 +1,6 @@
 import { useState } from "react";
 //import { toast } from "react-toastify";
-import { Logo } from "../../assets/img/Logo.jpg";
+import Logo from "../../assets/img/QRCode.gif";
 //Listagem das medidas disponível
 const listMedidas = [
   { id: 1, name: "150x150" },
@@ -44,11 +44,12 @@ function Teste() {
       <div className="px-4 py-5 my-5 text-center">
         <img
           className="d-block mx-auto mb-4"
-          href={Logo}
+          src={Logo}
           alt=""
-          width="72"
-          height="57"
+          width="250"
+          height="250"
         />
+
         <h1 className="display-5 fw-bold">QR Code Generator</h1>
         <div className="col-lg-6 mx-auto">
           <input

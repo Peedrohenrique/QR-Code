@@ -19,8 +19,8 @@ Este projeto foi criado para aprimorar meus conhecimento</b></br>
  assim como eu fiquei.<br><h4>
 
 <img src="https://media.giphy.com/media/fWfowxJtHySJ0SGCgN/giphy.gif" /><br><br>
-<h4>Está esperando o que para clonar, colaborar e seguir ?</h4>
-<h4>Estou aqui ansioso para você entrar em contato rsrs<h4><br>
+<h4>Está esperando o que para clonar, colaborar e seguir ?<br>
+Estou aqui ansioso para você entrar em contato rsrs</h4>
 <img src="https://media.giphy.com/media/xUySTwvLU2wwPqOtsk/giphy.gif" /><br><br>
  ## 📫 Contatos <br><br>
 

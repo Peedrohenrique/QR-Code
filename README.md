@@ -11,7 +11,7 @@ Este projeto foi criado para aprimorar meus conhecimento</b></br>
 
 <h3>Esta aplicação foi desenvolvida em:<h3>
 
-[REACTJS](https://developer.mozilla.org/pt-BR/docs/Web/REACTJS)<br>
+[Reactjs](https://developer.mozilla.org/pt-BR/docs/Web/reactjs)<br>
 [Bootstrap](https://www.homehost.com.br/blog/tutoriais/o-que-e-bootstrap/)
 
 <h4>Como sempre eu estou me surpreendendo com o ''REACTJS'' a cada dia<br>

@@ -11,11 +11,12 @@ Este projeto foi criado para aprimorar meus conhecimento</b></br>
 
 <h3>Esta aplicação foi desenvolvida em:<h3>
 
-[REACT](https://developer.mozilla.org/pt-BR/docs/Web/REACT)<br>
+[REACTJS](https://developer.mozilla.org/pt-BR/docs/Web/REACTJS)<br>
 [Bootstrap](https://www.homehost.com.br/blog/tutoriais/o-que-e-bootstrap/)
 
 <h4>Como sempre eu estou me surpreendendo com o ''REACTJS'' a cada dia<br>
- e acredito que quando você ler este código, vai ficar tão impressionado assim como eu fiquei.<br>
+ e acredito que quando você ler este código, vai ficar tão impressionado<br> 
+ assim como eu fiquei.<br><h4>
 
 <img src="https://media.giphy.com/media/fWfowxJtHySJ0SGCgN/giphy.gif" /><br><br>
 <h4>Está esperando o que para clonar, colaborar e seguir ?</h4>

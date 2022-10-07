@@ -14,7 +14,7 @@ Este projeto foi criado para aprimorar meus conhecimento</b></br>
 [REACT](https://developer.mozilla.org/pt-BR/docs/Web/REACT)<br>
 [Bootstrap](https://www.homehost.com.br/blog/tutoriais/o-que-e-bootstrap/)
 
-<h4>Como sempre eu estou me surpreendendo com o ''REACTJS'' a cada dia
+<h4>Como sempre eu estou me surpreendendo com o ''REACTJS'' a cada dia<br>
  e acredito que quando você ler este código, vai ficar tão impressionado assim como eu fiquei.<br>
 
 <img src="https://media.giphy.com/media/fWfowxJtHySJ0SGCgN/giphy.gif" /><br><br>

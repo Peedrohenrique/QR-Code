@@ -9,7 +9,7 @@ function QrCode() {
   const [tamanho, setTamanho] = useState("");
   const [bgColor, setBgColor] = useState("ffffff");
   const [qrCode, setQrCode] = useState("");
-  const rota = `http://api.qrserver.com/v1/create-qr-code/?data=${link}!&size=${tamanho}&bgcolor=${bgColor}`;
+  const rota = `http://api.qrserver.com/v1/create-qr-code/?data=${link}&size=${tamanho}&bgcolor=${bgColor}`;
 
   function handleClick() {
     setQrCode(rota);
